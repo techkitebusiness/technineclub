@@ -1,0 +1,5 @@
+ router.get('/wallet/withdrawal', middlewareController, homeController.withdrawalPage);
+
+ const withdrawalPage = async (req, res) => {
+    return res.render("wallet/withdrawal.ejs");
+}y

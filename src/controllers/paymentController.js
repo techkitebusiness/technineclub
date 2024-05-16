@@ -426,12 +426,12 @@ const initiateWowPayPayment = async (req, res) => {
             order_date: date,
             goods_name: user.phone,
             // notify_url: `${process.env.APP_BASE_URL}/wallet/verify/wowpay`,
-            notify_url: `https://247cashwin.cloud/wallet/verify/wowpay`,
+            notify_url: `https://9clubgame.xyz/wallet/verify/wowpay`,
             mch_return_msg: user.phone,
             // payment_key: 'TZLMQ1QWJCUSFLH02LAYRZBJ1WK7IHSG',
         };
 
-        params.page_url = 'https://247cashwin.cloud/wallet/verify/wowpay';
+        params.page_url = 'https://9clubgame.xyz/wallet/verify/wowpay';
 
         params.sign = wowpay.generateSign(params, process.env.WOWPAY_MERCHANT_KEY);
         // params.sign = wowpay.generateSign(params, 'TZLMQ1QWJCUSFLH02LAYRZBJ1WK7IHSG');
@@ -443,7 +443,7 @@ const initiateWowPayPayment = async (req, res) => {
 
         const response = await axios({
             method: "post",
-            url: 'https://pay6de1c7.wowpayglb.com/pay/web',
+            url: 'https://pay.sunpayonline.xyz/pay/web',
             data: querystring.stringify(params)
         })
 
